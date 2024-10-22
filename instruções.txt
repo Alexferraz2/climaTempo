@@ -1,0 +1,63 @@
+Iniciando um projeto do zero
+
+1 - Criar um repositório no git/github
+2 - no terminal criar o repositório local, digitando git init e enter.
+3 - Iniciar o projeto em Node.Js, criando a pasta package.json, digitando o comando npm init -y, com -y para ele já responder algumas perguntas.
+4- Instalar as bibliotecas react, react-dom e next, digitando o comando npm install react react-dom next
+5 - Alterar o script no package.json para "dev": "next dev"
+
+iniciando um projeto através de um fork no git/github
+
+1 - Fazer um fork que está no git/hub
+2 - Copiar o link do repositório para depois, fazer um clone pelo terminal, digitando o seguinte comando git clone link do repositório
+3 - Não é necessário criar o repositório local, como o git init
+4 - Iniciar o projeto em Node.Js, criando a pasta package.json, digitando o comando npm init -y, com -y para ele já responder algumas perguntas.
+5 - Instalar as bibliotecas react, react-dom e next, digitando o comando npm install react react-dom next
+6 - Alterar o script no package.json para "dev": "next dev
+
+Instalando o Styled Component
+
+1 - digitando o comando no terminal npm install --save styled-components
+2 - Para evitar problemas do styled-component com o next, faça os comandos abaixo:
+	2.1 - Criar um arquivo na raiz do projeto, chamado next.config.jsx e dentro dele digitar o seguinte abaixo:
+		const nextConfig = {
+    		   compiler: {
+        		styledComponents: true,
+    		    },
+		}
+
+	module.exports = nextConfig
+	
+	2.2 - Criar o arquivo _document.jsx dentro da pasta pages, e digitar as linhas abaixo:
+
+		
+import Document from "next/document";
+import { ServerStyleSheet } from "styled-components";
+
+export default class MyDocument extends Document {
+  static async getInitialProps(ctx){
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
+  }
+}

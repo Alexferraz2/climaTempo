@@ -6,12 +6,12 @@ import BackgroundImageWithChildren from '../src/components/backgroundImageWiyhCh
 
 const StyleDiv = styled.div`
     background-color: ${props => props.theme.colors.white};   
-    
-    *{
-    padding: 0;
-    margin: 0;
-}  
-    
+    min-width: 500px;  
+
+    @media (max-width: 500px) {
+        min-width: 100%;
+    }
+
 `
 
 

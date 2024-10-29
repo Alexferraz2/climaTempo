@@ -3,8 +3,8 @@ import InputWithSugestions from '../Form/InputWithSugestions/InputWithSugestions
 
 const SearchCity = () => {
     const [searchText, setSearchText] = useState('');
-
-    console.log(search)
+    console.log(searchText)
+    //
     return (
         <InputWithSugestions 
             placeholder='Digite a sua cidade'

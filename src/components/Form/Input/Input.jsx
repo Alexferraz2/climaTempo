@@ -14,9 +14,9 @@ const StyledInput = styled.input`
     
 `
 
-const Input = ({ placeholder, className } = props ) => {
+const Input = ({ placeholder, className, value, onChange} = props ) => {
     return (
-        <StyledInput className={className} placeholder={placeholder}/>
+        <StyledInput className={className} placeholder={placeholder} value={value} onChange={onChange}/>
     )
 }
 

@@ -18,11 +18,11 @@ const Sugestions = styled.div`
 `
 
 
-const InputWithSugestions = ( {sugestions, placeholder, className } ) => {
+const InputWithSugestions = ( {sugestions, placeholder, className, value, onChange } ) => {
     return (
         <>
             
-            <Input className={className} placeholder={placeholder} />
+            <Input className={className} placeholder={placeholder} value={value} onChange={onChange} />
             <SugestionsContainer>
                 {sugestions.map((sugestion, id) => 
                     <Sugestions 

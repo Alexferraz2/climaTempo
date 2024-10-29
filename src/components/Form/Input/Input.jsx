@@ -11,11 +11,12 @@ const StyledInput = styled.input`
     border-radius: 10px;
     width: 100%;
     
+    
 `
 
-const Input = ({ placeholder} = props ) => {
+const Input = ({ placeholder, className } = props ) => {
     return (
-        <StyledInput placeholder={placeholder}/>
+        <StyledInput className={className} placeholder={placeholder}/>
     )
 }
 

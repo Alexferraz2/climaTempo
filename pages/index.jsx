@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import BackgroundImageWithChildren from '../src/components/backgroundImageWiyhChildren/BackgroundImageWithChildren'
 import Logo from '../src/components/logo/Logo'
-import InputWithSugestions from '../src/components/Form/InputWithSugestions/InputWithSugestions'
+import SearchCity from '../src/components/SearchCity/SearchCity'
 
 
 
@@ -20,7 +20,7 @@ const StyleDiv = styled.div`
 
 `
 
-const StyledInput = styled(InputWithSugestions)`    
+const StyledInput = styled(SearchCity)`  
     box-sizing: border-box;
     
 `

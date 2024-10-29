@@ -14,7 +14,7 @@ const StyledContainer = styled.div`
     display: flex;
 `
 
-const BackgroundImageWithChildren = ( {children, image} ) =>  {
+const BackgroundImageWithChildren = ( {children, image = '/background.png' } ) =>  {
     return (
         <StyledContainer>
             {children}
@@ -28,8 +28,6 @@ const BackgroundImageWithChildren = ( {children, image} ) =>  {
     )
 }
 
-BackgroundImageWithChildren.defaultProps = {
-    image: '/background.png'
-}
+
 
 export default BackgroundImageWithChildren;

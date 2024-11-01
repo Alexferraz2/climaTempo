@@ -18,16 +18,16 @@ const Sugestions = styled.div`
 `
 
 
-const InputWithSugestions = ( {sugestions, placeholder, className, value, onChange } ) => {
+const InputWithSugestions = ( {suggestions, ...props} ) => {
     return (
         <>
             
-            <Input className={className} placeholder={placeholder} value={value} onChange={onChange} />
+            <Input {...props} />
             <SugestionsContainer>
-                {sugestions.map((sugestion, id) => 
+                {suggestions.map((sugestion, id) => 
                     <Sugestions 
-                    onClick={sugestion.onclick}
-                    key={`sugestion-${id}`}>
+                        onClick={sugestion.onclick}
+                        key={`sugestion-${id}`}>
                     
                         
                         {sugestion.text}</Sugestions>

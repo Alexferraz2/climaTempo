@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import BackgroundImageWithChildren from '../src/components/backgroundImageWiyhChildren/BackgroundImageWithChildren'
+import BackgroundImageWithChildren from '../src/components/layout/backgroundImageWiyhChildren/BackgroundImageWithChildren'
 import Logo from '../src/components/logo/Logo'
 import SearchCity from '../src/components/SearchCity/SearchCity'
 

@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         margin: 0;
         font-family: sans-serif;
+        color: ${props => props.theme.colors.black};
         
         
     }

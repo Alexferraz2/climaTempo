@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import NavBar from "../../../src/components/NavBar/NavBar";
 import Container from "../../../src/components/layout/Container/Container";
+import ClimaCard from "../../../src/components/ClimaCard/ClimaCard";
 
 const Body = styled.div`
     background-color: ${props => props.theme.colors.gray};
@@ -22,6 +23,13 @@ const Content = styled.div`
     padding: 80px 0;
 `
 
+const ClimaContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    
+`
 
 const InfoPage = () => {
     return (
@@ -33,6 +41,12 @@ const InfoPage = () => {
                         <Text>Previsão do Tempo</Text>
                         <CityName>Florianópolis</CityName>
                     </Content>
+
+                    <ClimaContainer>
+                        <ClimaCard/>
+                        <ClimaCard/>
+                        <ClimaCard/>
+                    </ClimaContainer>
                                        
                 </Container>  
             </Body>

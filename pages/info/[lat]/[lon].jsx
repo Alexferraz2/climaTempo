@@ -43,7 +43,7 @@ const InfoPage = () => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.NEXT_PUBLIC_OWM_KEY}&units=metric&lang=pt_br`)
         const json = await response.json()
         setCurrentInfo(json)
-        console.log(currentInfo)
+        
         
     }
     

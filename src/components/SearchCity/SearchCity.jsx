@@ -10,7 +10,7 @@ const SearchCity = () => {
     const fetchCitiesList = async () => {
         const cities_limit = 5      
                  
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchText}&limit=${cities_limit}&appid=${process.env.NEXT_PUBLIC_OWM_KEY}`)
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchText}&limit=${cities_limit}&appid=${process.env.NEXT_PUBLIC_OWM_KEY}`)
         const json = await response.json()
         console.log(json)
         handleList(json)

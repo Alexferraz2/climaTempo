@@ -54,7 +54,7 @@ const ClimaCard = ({title, icon, description, temp, feels, min, max}) => {
         <StyledClimaCard>
             <Title>{title}</Title>
             <BasicInfo>
-                <BasicInfoImg src={`http://openweathermap.org/img/wn/${icon}@2x.png`}/>
+                <BasicInfoImg src={`https://openweathermap.org/img/wn/${icon}@2x.png`}/>
                 <BasicInfoText>{description}</BasicInfoText>
             </BasicInfo>
             <InfoLine>

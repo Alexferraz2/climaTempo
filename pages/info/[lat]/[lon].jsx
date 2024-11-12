@@ -5,10 +5,11 @@ import { useRouter } from "next/router";
 import NavBar from "../../../src/components/NavBar/NavBar";
 import Container from "../../../src/components/layout/Container/Container";
 import ClimaCard from "../../../src/components/ClimaCard/ClimaCard";
+import Footer from "../../../src/components/Footer/Footer";
 
 const Body = styled.div`
     background-color: ${props => props.theme.colors.gray};
-    min-height: 100vh;
+    min-height: calc(100vh - 200px);
 `
 const Text = styled.p`
     font-size: 20px;
@@ -22,7 +23,7 @@ const CityName = styled.h2`
     margin: 0;
 `
 const Content = styled.div`
-    padding: 80px 0;
+    padding: 10px 0;
 `
 
 const ClimaContainer = styled.div`
@@ -106,6 +107,9 @@ const InfoPage = () => {
                                        
                 </Container>  
             </Body>
+            <Footer>
+                
+            </Footer>
             
             
         </>

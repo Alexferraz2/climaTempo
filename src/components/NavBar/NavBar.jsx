@@ -5,7 +5,7 @@ import Container from '../layout/Container/Container';
 import Logo from '../logo/Logo'
 
 const StyledNavBar = styled.div`
-    height: 105px;
+    height: 90px;
     display: flex;
     align-items: center;
     
